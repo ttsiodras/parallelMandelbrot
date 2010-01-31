@@ -1,1 +1,4 @@
 Why doesn't "parallel" make my Core2Duo use more than one core?
+
+Update, after patch from saynte: It does now, but I don't understand
+why saynte's changes made a difference... :-(
