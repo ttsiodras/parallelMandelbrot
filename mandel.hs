@@ -36,8 +36,8 @@ emitPNM =
     (++) ("P5\n" ++ show width ++ " " ++ show height ++ "\n255\n") . map chr
 
 width, height :: Int
-width  = 1024
-height = 1024
+width  = 800
+height = 600
 
 bottomLeft   = ComplexVal (-2.0) (-1.2)
 upRight      = ComplexVal 1.2 1.2

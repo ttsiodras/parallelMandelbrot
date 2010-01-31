@@ -13,7 +13,7 @@ GHC_OPTS_P=
 	ghc ${GHC_OPTS} --make $< -o $@
 
 bench:	${TARGETS}
-	@echo Output of $<... ; ./$< > data.pnm && display ./data.pnm ; for j in `seq 1 8` ; do echo Benchmarking 3 times with $$j threads... ; time ./$< +RTS -N$$j -RTS > /dev/null ;  time ./$< +RTS -N$$j -RTS> /dev/null ;  time ./$< +RTS -N$$j -RTS > /dev/null ; done
+	@echo Output of $<... ; ./$< > data.pnm && display ./data.pnm ; for j in `seq 1 2` ; do echo Benchmarking 3 times with $$j threads... ; time ./$< +RTS -N$$j -RTS > /dev/null ;  time ./$< +RTS -N$$j -RTS> /dev/null ;  time ./$< +RTS -N$$j -RTS > /dev/null ; done
 
 clean:
 	rm -f *.o *.hi data.pnm ${TARGETS}
